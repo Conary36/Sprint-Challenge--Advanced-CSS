@@ -1,9 +1,18 @@
 // Mixins Here
-.btn(@color,@background){
+.alignStuff{
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+
+
+
+.mobile(@color,@background){
     display: flex;
      width: 400px;
      height: 50px;
-     justify-content: center;
+     .alignStuff();
+     margin: 0 25%;
      background-color: @background;
      font-size: 20px;
      border-radius: 10px;
@@ -13,4 +22,20 @@
     color: darken(@pink, 30%);
     background-color: lighten(@background, 15%);
   }
+}
+.desktop(@color,@background){
+    display: flex;
+       .alignStuff();
+       font-size: 20px;
+       width: 103px;
+       height: 36px;
+       background-color: @background;
+       color: @color;
+       border-radius: 5%;
+       cursor: pointer;
+
+       &:hover{
+           color: darken(@pink, 30%);
+           background-color: lighten(@background, 15%);
+       }
 }

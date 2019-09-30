@@ -1,3 +1,8 @@
+.alignStuff {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -185,6 +190,9 @@ footer {
   justify-content: center;
   align-items: center;
 }
+.upper {
+  background-color: #F6F6F6;
+}
 .home .intro h2 {
   padding: 15px;
 }
@@ -202,6 +210,22 @@ footer {
   border-radius: 20px;
   height: 100%;
 }
+@media (max-width: 500px) {
+  .home .space-images .blast {
+    width: 100%;
+    margin-bottom: -19%;
+  }
+}
+@media (max-width: 500px) {
+  .home .space-images .sky {
+    visibility: hidden;
+  }
+}
+@media (max-width: 500px) {
+  .home .space-images .launch {
+    visibility: hidden;
+  }
+}
 .home .visit-planets {
   padding: 15px;
 }
@@ -217,6 +241,7 @@ footer {
   padding: 50px 60px;
   display: flex;
   justify-content: center;
+  margin: 0 3%;
 }
 .home .walk .walk-text {
   width: 50%;
@@ -227,23 +252,63 @@ footer {
 .home .walk .walk-text p {
   margin-bottom: 26px;
 }
+@media (max-width: 500px) {
+  .home .walk .walk-text {
+    align-items: center;
+    width: 75%;
+    margin: -4% 0;
+    align-content: space-evenly;
+    padding: 15px;
+  }
+}
 .home .walk .walk-text .btn {
   display: flex;
-  width: 400px;
-  height: 50px;
   justify-content: center;
-  background-color: #454A59;
+  align-items: center;
+  flex-direction: column;
   font-size: 20px;
-  border-radius: 10px;
+  width: 103px;
+  height: 36px;
+  background-color: #01011a;
   color: white;
+  border-radius: 5%;
+  cursor: pointer;
 }
 .home .walk .walk-text .btn:hover {
   color: rgba(97, 11, 109, 0.89019608);
-  background-color: #666e84;
+  background-color: #040464;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text .btn {
+    display: flex;
+    width: 400px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 25%;
+    background-color: #01011a;
+    font-size: 20px;
+    border-radius: 10px;
+    color: white;
+  }
+  .home .walk .walk-text .btn:hover {
+    color: rgba(97, 11, 109, 0.89019608);
+    background-color: #040464;
+  }
 }
 .home .walk .walk-text .walk-img {
   width: 46%;
   margin-left: 4%;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text .walk-img {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .home .walk .walk-text .walk-img img {
   width: 100%;
